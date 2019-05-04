@@ -1,0 +1,53 @@
+This is my own code when completing the NY restaurant project on codecadamy.com 
+About querying a database in different ways:
+
+------------------------code starts here--------------------------------------
+
+
+select distinct neighborhood from nomnom;
+
+select distinct cuisine from nomnom;
+
+select * from nomnom
+where cuisine is 'Chinese';
+
+select * from nomnom
+where review >= 4;
+
+
+select name,
+Case
+when review > 4.5 then 'Extrodinary'
+when review > 4 then 'Excellent'
+when review > 3 then 'Good'
+when review > 2 then 'Fair'
+else 'Poor'
+end as 'Review'
+from nomnom
+limit 10;
+
+
+select * from nomnom
+where cuisine is 'Italian' 
+	and price is '$$$';
+  
+select * from nomnom
+where name like '%meatball%';
+
+
+select * from nomnom
+where neighborhood is 'Midtown' or 'Downtown' or 'Chinatown';
+
+select * from nomnom
+where health is null;
+
+select * from nomnom
+order by review desc
+limit 10;
+
+
+
+
+
+
+
